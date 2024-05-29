@@ -1,0 +1,18 @@
+.logo {
+  width: max-content;
+  padding: 15px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--pale-10);
+  border-radius: 20px;
+
+  &:hover {
+    background-color: var(--pale-20);
+  }
+
+  img {
+    width: 25px;
+  }
+}

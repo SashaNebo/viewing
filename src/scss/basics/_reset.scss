@@ -1,0 +1,49 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+
+  font: inherit;
+  text-align: inherit;
+
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+img {
+  display: block;
+}
+
+img,
+svg,
+picture {
+  max-width: 100%;
+  height: auto;
+}

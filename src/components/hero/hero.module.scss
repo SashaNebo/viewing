@@ -1,0 +1,39 @@
+.hero {
+  padding-top: 120px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(65, 172, 207, 1) 50%, rgba(71, 86, 199, 1) 100%);
+
+  &__content {
+    height: calc(100vh - 120px);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-top: 150px;
+
+    font-size: 120px;
+    text-align: center;
+  }
+
+  &__btn-start {
+    margin-top: 100px;
+    padding: 24px 20px;
+    border-radius: 9999px;
+    background: linear-gradient(180deg, rgba(19, 58, 158, 0.46) 41%, rgba(158, 180, 235, 0.46) 100%);
+
+    font-size: var(--fz-base);
+    font-weight: var(--fw-bold);
+    color: #fff;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+    
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}

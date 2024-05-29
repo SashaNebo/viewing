@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+:root {
+  --ff-base: 'Inter', sans-serif;
+  --ff-system: system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+
+  --fz-base: 20px;
+  --fz-heading: 56px;
+
+  --fw-base: 400;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  --lh-base: 1.2;
+
+  --white: #fff;
+  --black: #000;
+
+  --pale-10: rgba(255, 255, 255, 0.1);
+  --pale-20: rgba(255, 255, 255, 0.2);
+
+  --rounded-md: 10px;
+  --rounded-lg: 20px;
+}
