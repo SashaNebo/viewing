@@ -1,0 +1,8 @@
+export { default as BagIcon } from "../../../public/images/svgs/bag.svg"
+export { default as GalleryIcon } from "../../../public/images/svgs/gallery.svg"
+export { default as FireIcon } from "../../../public/images/svgs/fire.svg"
+export { default as HeartIcon } from "../../../public/images/svgs/heart.svg"
+export { default as DiscordIcon } from "../../../public/images/svgs/discord.svg"
+export { default as GithubIcon } from "../../../public/images/svgs/github.svg"
+export { default as TelegramIcon } from "../../../public/images/svgs/telegram.svg"
+export { default as GoogleIcon } from "../../../public/images/svgs/google.svg"

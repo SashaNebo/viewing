@@ -1,9 +1,11 @@
 .header-fixed {
   width: 100%;
+  padding-top: 10px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
+  backdrop-filter: blur(10px);
 
   &__container {
     max-width: 90%;
@@ -11,9 +13,9 @@
   }
 
   &__wrapper {
-    margin-top: 10px;
     padding: 15px 20px;
     background-color: rgba($color: #42AACF, $alpha: .5);
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(75, 164, 226, 1) 47%, rgba(69, 60, 199, 1) 100%);
     border-radius: var(--rounded-md);
   }
 
@@ -24,26 +26,99 @@
   }
 }
 
-.search {
-  width: 200px;
-  height: 50px;
+.social {
   justify-self: center;
-  background-color: var(--pale-20);
-  border-radius: var(--rounded-lg);
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+  }
+
+  &__link {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4481CB;
+    border-radius: var(--rounded-md);
+  }
 }
 
-.nav-list {
+.custom {
   display: flex;
   justify-content: end;
   align-items: center;
-  column-gap: 5px;
+  column-gap: 10px;
 
-
-  &__item {
+  &-group__icons {
     display: flex;
+    align-items: center;
   }
 
-  a, button {
-    padding: 5px;
+  &-group__account {
+    display: flex;
+    align-items: center;
+
+    a {
+      padding: 10px 5px;
+    }
   }
+}
+
+.categories {
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  padding: 20px;
+
+  background-color: rgb(108, 136, 201);
+  border-radius: var(--rounded-md);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform .1s linear;
+
+  &__list {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 15px;
+  }
+
+  &__link {
+    padding: 5px;
+    text-transform: capitalize;
+
+    &:hover {
+      color: var(--pale-20);
+    }
+  }
+}
+
+.categories-btn {
+  position: relative;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 3px;
+
+  &::after {
+    content: "";
+    display: block;
+    border-style: solid;
+    border-width: 6px 6px 0 6px;
+    border-color: #fff transparent transparent transparent;
+  }
+
+  &:hover .categories {
+    transform: scaleY(1);
+  }
+}
+
+.wishlist {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
