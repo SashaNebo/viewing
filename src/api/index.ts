@@ -7,6 +7,7 @@ const requestGalleryImg = (id: EP_VALUES) => {
 }
 
 const requestGalleryImages = (id: EP_VALUES) => {
+  console.log(1)
   return Promise.all([...Array(18)].map(() => requestGalleryImg(id)))
 }
 

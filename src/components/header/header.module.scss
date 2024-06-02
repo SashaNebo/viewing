@@ -1,4 +1,5 @@
 .header-fixed {
+  user-select: none;
   width: 100%;
   padding-top: 10px;
   position: fixed;
@@ -55,6 +56,7 @@
   &-group__icons {
     display: flex;
     align-items: center;
+    column-gap: 5px;
   }
 
   &-group__account {

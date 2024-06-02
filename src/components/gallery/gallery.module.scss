@@ -1,9 +1,15 @@
 .gallery {
-  padding: 50px 0;
-  // background: linear-gradient(0deg, rgba(19, 58, 158, 1) 0%, rgba(227, 240, 255, 1) 100%);
+  padding: 150px 0 25px;
 
   &__title {
     text-transform: capitalize;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   &__list {
@@ -12,29 +18,38 @@
     gap: 20px 10px;
 
     margin-top: 50px;
+  }
 
+  &__item {
+    position: relative;
+    border-radius: var(--rounded-lg);
+    overflow: hidden;
 
-    &-item {
-      position: relative;
-      border-radius: var(--rounded-lg);
-      overflow: hidden;
+    .btn-like {
+      position: absolute;
+      top: 2%;
+      right: 2%;
+      z-index: 1;
 
-      .btn-like {
-        position: absolute;
-        top: 2%;
-        right: 2%;
-        z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        svg {
-          width: 30px;
-          fill: var(--pale-20);
-        }
+      svg {
+        width: 30px;
+        fill: var(--pale-20);
       }
     }
+  }
+
+  &__btn-more {
+    margin-top: 25px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    border-radius: 100%;
   }
 }
 

@@ -1,5 +1,5 @@
 const EP = {
-  home: "home",
+  all: "all",
   abstract: "abstract",
   animals: "animals",
   cats: "cats",

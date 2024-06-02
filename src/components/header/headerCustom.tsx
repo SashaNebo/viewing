@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link"
 import s from "./header.module.scss"
 import { BagIcon, GalleryIcon } from "../icons"
@@ -25,7 +26,10 @@ export const HeaderCustom = () => {
           </div>
         </button>
 
-        <Link className={s["wishlist"]} href={"/wishlist"}>
+        <Link
+          className={s["wishlist"]}
+          href={"/wishlist"}
+          aria-label="open wishlist">
           <BagIcon />
         </Link>
       </div>

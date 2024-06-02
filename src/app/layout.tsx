@@ -1,9 +1,6 @@
 import "../scss/main.scss"
 import type { Metadata } from "next"
-// import Categories from "./categories/page"
-import { Hero } from "@/components/hero"
 import { Header } from "@/components/header"
-import { Categories } from "@/components/categories"
 
 export const metadata: Metadata = {
   title: "Viewing",
@@ -19,11 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <main>
-          <Hero />
-          {/* <Categories /> */}
-          {children}
-        </main>
+        <main>{children}</main>
       </body>
     </html>
   )

@@ -2,21 +2,36 @@ import { useEffect, useState } from "react"
 import { requestGalleryImages } from "@/api"
 import type { EP_VALUES } from "@/types"
 
-export const useGallery = (id: EP_VALUES): [string[], boolean, string] => {
+type Status = "success" | "loading" | "error"
+
+export const useGallery = (
+  id: EP_VALUES,
+): { galleryImages: string[]; addMoreImages: () => void; status: Status } => {
   const [galleryImages, setGalleryImages] = useState<string[]>([])
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState("")
+  const [status, setStatus] = useState<Status>("loading")
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       requestGalleryImages(id)
         .then((images) => setGalleryImages(images))
-        .catch((error) => setError(error.message))
-        .finally(() => setIsLoading(false))
+        .catch(() => setStatus(() => "error"))
+        .finally(() =>
+          setStatus((prev) => (prev === "error" ? "error" : "success")),
+        )
     })
 
     return () => clearTimeout(timeout)
   }, [])
 
-  return [galleryImages, isLoading, error]
+  const addMoreImages = () => {
+    setStatus(() => "loading")
+    requestGalleryImages(id)
+      .then((images) => setGalleryImages((prev) => [...prev, ...images]))
+      .catch(() => setStatus(() => "error"))
+      .finally(() =>
+        setStatus((prev) => (prev === "error" ? "error" : "success")),
+      )
+  }
+
+  return { galleryImages, addMoreImages, status }
 }

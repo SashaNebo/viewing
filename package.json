@@ -10,6 +10,7 @@
     "component": "npx generate-react-cli component"
   },
   "dependencies": {
+    "framer-motion": "^11.2.10",
     "next": "14.2.3",
     "react": "^18",
     "react-content-loader": "^7.0.0",
