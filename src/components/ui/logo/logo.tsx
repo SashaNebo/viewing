@@ -1,4 +1,5 @@
-import Link from "next/link"
+// import Link from "next/link"
+import { Link } from "next-view-transitions"
 
 import s from "./logo.module.scss"
 import { FireIcon } from "@/components/icons"

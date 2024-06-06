@@ -1,8 +1,9 @@
 "use client"
-import Link from "next/link"
+// import Link from "next/link"
 import s from "./header.module.scss"
 import { BagIcon, GalleryIcon } from "../icons"
 import { categories } from "@/types"
+import { Link } from "next-view-transitions"
 
 export const HeaderCustom = () => {
   return (
